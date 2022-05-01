@@ -23,3 +23,4 @@ and start the project with
 nodemon
 ```
 
+The app is also deployed to heroku, to access: https://secure-beyond-23870.herokuapp.com/
