@@ -1,7 +1,6 @@
-# CS103a Express App Demo
+# CS103a - CPA02
 
-This is a starter project which has a simple authentication module 
-and provides access to a mongoose database in the cloud.
+This is a course searching app with a connection feature.
 
 ## Installation
 Download the project from github and download nodejs and npm from https://nodejs.org
@@ -24,9 +23,3 @@ and start the project with
 nodemon
 ```
 
-## App Demonstration 
-Here is a link to a moive showing how you can use our app: https://brandeis.zoom.us/rec/share/wliTxhF0wqb0cEPVlRDyy9Ezxhlb65GotEDAT9dRefoIZ2H5cS7jB3SHqSvE5DJc.ykwU27jWz_aO4rhM?startTime=1650622719000
-
-
-
-# Siyu_CPA02
