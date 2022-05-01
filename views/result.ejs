@@ -1,0 +1,21 @@
+
+  <h1>Submit successully!</h1>
+  Hello <%= name %>, we have got the following information:<br>
+  <ul>
+    <li>Your email is <%= email %></li>
+    <li>You are a <%= grade %></li>
+    <li><%= answer %></li>
+    <li><% if (typeof(hobby)== "undefined") {%>
+        You currently are not studying in the given field;
+    <%} else if (typeof(hobby)=="string") {%>
+        You have one field of study, <%= major %>
+    <%}  else {%>
+              Here are your major area:
+            <ul>
+            <% major.map((x) => {%>
+                <li> <%= x %> </li>
+            <% }) %>
+            </ul>
+   <% } %></li>
+  </ul>
+ Please look forward to our reach out message!
