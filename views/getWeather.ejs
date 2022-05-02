@@ -1,0 +1,44 @@
+
+    <div class="jumbotron">
+        <br><br>
+        <h1 class="display-4 text-center">Today's weather in <%= state %></h1>
+    </div>
+
+
+    <div class="row">
+        <div class="col-3 mx-auto">
+            <div class="text-center">
+                <image width="200" src=<%= pic %>><br>
+                    <h2>There is a <%= description %> in <%= state %></h2><br>
+                    <h2><%= temp %>	&#8457</h2><br>
+                
+                    <input type="submit" class="btn btn-primary" value="Add to list"><br><br><br>
+                    <a class="btn btn-primary" href="weather" role="button">Search another weather</a>
+            </div>
+        </div>
+    </div>
+  
+
+    <div class="bg-light border border-primary p-3 rounded m-3">
+
+        <p class="lead text-center">There are a total of <%= items.length %> weathers saved. The details are
+        as below: </p>
+    </div>
+    <hr>
+    <ol>
+        <% for (item of items){%>
+            <li class="mb-2">          
+                <b><%= item.state%>: </b> <i><%= item.description %></i> of <i><%= item.temp %></i> degrees
+
+                <br>
+                Weather Searched at <%= item.createdAt%>.
+                
+         
+            </li>
+        <% }%>
+    </ol>
+    <hr>
+</div>
+
+
+    

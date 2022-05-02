@@ -55,7 +55,7 @@ async (req,res,next) => {
     res.locals.name=req.body.name
     res.locals.grade=req.body.grade
     res.locals.major=req.body.major
-    let items = await connectInfo.find({willingness:"0"}); // lookup the user's todo items
+    let items = await connectInfo.find({willingness:"0"});
     res.locals.items = items;
     console.dir(req.body)
     const a=parseFloat(req.body.answer)

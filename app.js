@@ -22,6 +22,8 @@ var MongoDBStore = require('connect-mongodb-session')(session);
 const ToDoItem = require("./models/ToDoItem")
 const Course = require('./models/Course')
 const Schedule = require('./models/Schedule')
+const weatherInfo = require('./models/weatherInfo')
+
 
 // *********************************************************** //
 //  Loading JSON datasets
@@ -389,6 +391,39 @@ app.get('/schedule/remove/:courseId',
     }
   }
 )
+app.get('/weather', (req,res) => {
+  res.render('weather')
+})
+
+app.post("/getWeather",
+  async (req,res,next) => {
+    try {
+      const state = req.body.state
+      const url = "http://api.openweathermap.org/data/2.5/weather?q="+state+"&units=imperial&APPID=d3fd7fe792d8f4a038633a7170d66256"
+      const result = await axios.get(url)
+      console.dir(result.data)
+      const picurl = "http://openweathermap.org/img/w/"+result.data.weather[0].icon+".png"
+      console.log(picurl)
+      
+      res.locals.state = state
+      res.locals.pic = picurl
+      res.locals.description = result.data.weather[0].description
+      res.locals.temp = result.data.main.temp
+      res.locals. createdAt = new Date(); 
+      const weather= new weatherInfo(
+        { createdAt: res.locals. createdAt,
+          state: res.locals.state,
+          description:res.locals.description,
+           temp: res.locals.temp,
+        })
+        await weather.save()
+        let items = await weatherInfo.find();
+        res.locals.items = items;
+      res.render('getWeather')
+    } catch(error){
+      next(error)
+    }
+})
 
 
 // here we catch 404 errors and forward to error handler
