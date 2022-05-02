@@ -4,6 +4,8 @@ This is a course searching app with a connection feature, and a weather look up 
 
 ** **The app is also deployed to [Heroku](https://secure-beyond-23870.herokuapp.com/).** **
 
+Here is a quick demo video [recorded by ZOOM](https://brandeis.zoom.us/rec/share/dlxWfNmLZutyFqU4gxvzDpllsTEYw2f1A9DkCz9MXIbjCOxfrlHNRHAxQhqcnd_w.7dlvE7fLQ05TsMw7?startTime=1651527816000).
+
 ## Installation
 Download the project from github and download nodejs and npm from https://nodejs.org
 and cd into the folder
