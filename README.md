@@ -2,7 +2,7 @@
 
 This is a course searching app with a connection feature. The connection feature allows user to connect with the developer and other people that are using the app and are willing to connect!
 
-The deployed heroku link is: https://secure-beyond-23870.herokuapp.com/
+** **The app is also deployed to [Heroku](https://secure-beyond-23870.herokuapp.com/).** **
 
 ## Installation
 Download the project from github and download nodejs and npm from https://nodejs.org
