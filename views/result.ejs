@@ -19,3 +19,41 @@
    <% } %></li>
   </ul>
  Please look forward to our reach out message!
+ <hr>
+ <h1>To connect with your peers: </h1>
+ <table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Email #</th>
+          <th>GraduationYear</th>
+          <th>Major</th>
+      </tr>
+  </thead>
+  <tbody></tbody>
+  <% for (item of items) {
+      const name = item.name;
+      const email = item.email;
+      const graduationYear = item.grade;
+      const major=item.major;
+       %>
+    <tr class="mb-2"> 
+
+      <td>
+          <strong><%= item.name %></strong>
+      </td>
+      <td>
+        <strong><%= item.email %></strong>
+    </td>   
+    <td>
+      <strong><%= item.grade %></strong>
+    </td>   
+      <td>
+    <strong><%= item.major %></strong>
+      </td>
+
+  </tr>
+  <% } %>
+  </tbody>
+</table>
+
